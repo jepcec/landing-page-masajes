@@ -11,12 +11,13 @@ const menuItems = [
 <header class="fixed top-0 left-0 right-0 z-50 bg-teal-50/95 backdrop-blur-sm shadow-sm">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <div 
-      class="text-2xl font-bold text-teal-800 cursor-pointer hover:scale-105 transition-transform"
+      class="text-2xl font-bold text-teal-800 cursor-pointer"
       data-target="hero"
     >
       🌿 Tu Masaje
     </div>
 
+    <!-- Menú desktop -->
     <ul class="hidden md:flex space-x-6">
       {menuItems.map((item) => (
         <li>
@@ -30,22 +31,55 @@ const menuItems = [
       ))}
     </ul>
 
-    <button class="md:hidden text-teal-800">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- Botón hamburguesa -->
+    <button id="menu-toggle" class="md:hidden text-teal-800">
+      <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+      <svg id="icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </nav>
+
+  <!-- Menú móvil -->
+  <ul id="mobile-menu" class="hidden md:hidden bg-teal-50 border-t border-teal-100 px-6 pb-4">
+    {menuItems.map((item) => (
+      <li>
+        <button
+          data-target={item.target}
+          class="block w-full text-left text-teal-700 py-3 border-b border-teal-100"
+        >
+          {item.name}
+        </button>
+      </li>
+    ))}
+  </ul>
 </header>
 
-<!-- Espaciador para compensar el header fijo -->
-<div class="h-16"></div>
-
 <script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  // Toggle menú móvil
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+  });
+
+  // Scroll suave + cerrar menú
   document.querySelectorAll('[data-target]').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = document.getElementById(btn.getAttribute('data-target')!);
       target?.scrollIntoView({ behavior: 'smooth' });
+      
+      // Cerrar menú móvil
+      menu?.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
     });
   });
 </script>
