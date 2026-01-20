@@ -1,31 +1,242 @@
 ---
+// Services Data (English Only, No Service 5)
 const services = [
-  { title: "Masaje Relajante", price: "S/ 80", time: "60 min", desc: "Suaves movimientos para eliminar tensión y estrés." },
-  { title: "Tejido Profundo", price: "S/ 100", time: "50 min", desc: "Ideal para contracturas fuertes y deportistas." },
-  { title: "Piedras Calientes", price: "S/ 120", time: "70 min", desc: "Terapia geotermal para equilibrar la energía." },
+  {
+    id: "inka-massage",
+    title: "The Inka Massage",
+    price: "S/ 180",
+    time: "90 min",
+    shortDesc: "Ancient Andean techniques with hot stones for complete relaxation.",
+    fullDesc: "This medicinal massage is a combination of different Andean techniques, such as working on energy points, relaxing or strong kneading around the body. It ends with the application of hot stones on the back and legs for complete relaxation.",
+    variations: ["Aromatherapy Add-on", "Deep Tissue Focus", "Herbal Compress"],
+    tag: "Signature"
+  },
+  {
+    id: "champi-massage",
+    title: "Champi Massage",
+    price: "S/ 120",
+    time: "45 min",
+    shortDesc: "Indian head therapy to relieve mental fatigue and restore balance.",
+    fullDesc: "The Indian massage is a safe and effective therapy that relieves the back, neck, and head. The work done with Champi massage focuses on energy points, promoting physical harmony, balance, and mental and emotional well-being.",
+    variations: ["Scalp Oil Treatment", "Neck & Shoulder Focus"],
+    tag: "Relaxing"
+  },
+  {
+    id: "swedish-massage",
+    title: "Swedish Massage",
+    price: "S/ 140",
+    time: "60 min",
+    shortDesc: "Classic soothing massage to improve circulation and reduce stress.",
+    fullDesc: "The Swedish massage is a soothing massage involving deep kneading. It regulates blood circulation and relieves muscle pain, stress, and general health issues. It is designed to treat both body and soul.",
+    variations: ["Soft Pressure", "Medium Pressure", "Full Body Integration"],
+    tag: "Popular"
+  },
+  {
+    id: "shiatsu-massage",
+    title: "Shiatsu Massage",
+    price: "S/ 160",
+    time: "70 min",
+    shortDesc: "Japanese technique using pressure points to improve vitality.",
+    fullDesc: "Japanese Technique: Regulates the flow of energy in the body, relaxes the joints, and improves vitality. Shiatsu massage techniques involve pressure applied with hands, thumbs, elbows, and knees.",
+    variations: ["Mat Stretching", "Energy Balancing", "Sports Recovery"],
+    tag: "Therapeutic"
+  },
+  {
+    id: "hot-stones",
+    title: "Hot Stones Massage",
+    price: "S/ 190",
+    time: "75 min",
+    shortDesc: "Geothermal therapy to harmonize body and mind deeply.",
+    fullDesc: "A relaxing massage done by using cold or hot stones. The stone application allows for deeper massage, eliminates stress, and harmonizes the body and mind. Ideally suited for those suffering from high stress or insomnia.",
+    variations: ["Volcanic Stones", "Cold Marble Stones (Summer)", "Chakra Alignment"],
+    tag: "Luxury"
+  },
+  {
+    id: "feet-reflexology",
+    title: "Feet Reflexology",
+    price: "S/ 90",
+    time: "40 min",
+    shortDesc: "Stimulate the nervous system through pressure points on the feet.",
+    fullDesc: "This massage is performed on the feet, where the entire body is reflected. It relaxes, stimulates the nervous system, improves conditions, alleviates symptoms, and restores vitality and the capacity for self-healing.",
+    variations: ["Exfoliating Scrub", "Hydrating Mask", "Leg Massage Extension"],
+    tag: "Recovery"
+  },
+  {
+    id: "cupping-massage",
+    title: "Cupping Massage",
+    price: "S/ 110",
+    time: "50 min",
+    shortDesc: "Ancient suction therapy to increase blood flow and reduce pain.",
+    fullDesc: "Cupping is an ancient therapy that is now back in style. It aims to increase blood flow, soften scar tissue, and decrease muscle pain by placing cups on the skin to create suction. Excellent for chronic pain.",
+    variations: ["Static Cupping", "Sliding Cupping", "Combined with Deep Tissue"],
+    tag: "Upgrade"
+  },
 ];
 ---
-<section id="services" class="py-20 bg-green-50/50">
+
+<section id="services" class="py-20 bg-green-50/30">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-teal-800">Nuestros Servicios</h2>
-      <p class="text-gray-500 mt-4">Elige la terapia perfecta para ti</p>
+      <h2 class="text-4xl font-bold text-teal-900 mb-4 font-serif">Our Treatments</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+        Discover a sanctuary of peace. Select a service to view full details.
+      </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {services.map(s => (
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-green-100 flex flex-col">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-teal-900">{s.title}</h3>
-            <span class="bg-green-100 text-green-800 text-sm font-bold px-3 py-1 rounded-full">{s.time}</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((s) => (
+        <>
+          {/* Card Principal */}
+          <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-green-100 flex flex-col h-full relative overflow-hidden">
+            
+            {/* Efecto Hover Barra Superior */}
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <span class="text-xs font-bold tracking-wider text-teal-600 uppercase mb-1 block">{s.tag}</span>
+                <h3 class="text-xl font-bold text-gray-800 group-hover:text-teal-700 transition-colors font-serif">{s.title}</h3>
+              </div>
+              <div class="bg-green-50 text-teal-800 font-bold px-3 py-1 rounded-lg text-sm whitespace-nowrap">
+                {s.time}
+              </div>
+            </div>
+
+            <p class="text-gray-600 mb-6 leading-relaxed flex-grow">
+              {s.shortDesc}
+            </p>
+
+            <div class="flex items-center justify-between pt-6 border-t border-gray-100 mt-auto">
+              <span class="text-2xl font-bold text-teal-900">{s.price}</span>
+              <button 
+                data-open-modal={s.id}
+                class="flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-800 transition-colors cursor-pointer group/btn"
+              >
+                View Details 
+                <span class="group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+              </button>
+            </div>
           </div>
-          <p class="text-gray-600 mb-8 flex-grow">{s.desc}</p>
-          <div class="flex items-center justify-between mt-auto pt-6 border-t border-gray-100">
-            <span class="text-2xl font-bold text-teal-700">{s.price}</span>
-            <button class="text-sm font-semibold text-green-600 hover:text-green-800">Reservar &rarr;</button>
-          </div>
-        </div>
+
+          {/* Ventana Modal (Pop-up) */}
+          <dialog id={s.id} class="backdrop:bg-gray-900/60 bg-transparent p-0 m-auto rounded-2xl shadow-2xl w-[calc(100%-2rem)] md:max-w-lg max-h-[85vh] open:animate-fade-in closed:animate-fade-out overflow-y-auto overscroll-contain">
+            
+            <div class="bg-white p-6 md:p-8 rounded-2xl relative">
+              
+               <button data-close-modal={s.id} class="absolute top-3 right-3 md:top-4 md:right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 transition-colors z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div class="mb-6 border-b border-gray-100 pb-6">
+                 <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">{s.tag}</span>
+                 <h3 class="text-2xl md:text-3xl font-bold text-teal-900 mt-3 mb-3 font-serif pr-8">{s.title}</h3>
+                 
+                 <div class="flex flex-wrap gap-4 text-gray-500 text-sm">
+                    <span class="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-md">
+                      <svg class="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                      {s.time}
+                    </span>
+                    <span class="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-md">
+                      <svg class="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                      {s.price}
+                    </span>
+                 </div>
+              </div>
+
+              <div class="prose prose-teal prose-sm md:prose-base mb-8 text-gray-600 leading-relaxed">
+                <p>{s.fullDesc}</p>
+              </div>
+
+              <div class="bg-green-50/80 rounded-xl p-5 mb-8 border border-green-100">
+                <h4 class="font-bold text-teal-800 mb-3 text-xs uppercase tracking-wider">Available Variations</h4>
+                <ul class="grid grid-cols-1 gap-2">
+                  {s.variations.map(v => (
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                      <span>{v}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button class="w-full bg-teal-800 text-white font-bold py-3.5 rounded-xl hover:bg-teal-900 transition-colors shadow-lg shadow-teal-900/10 active:scale-[0.98] transform duration-100">
+                Book This Service
+              </button>
+            </div>
+          </dialog>
+        </>
       ))}
     </div>
   </div>
 </section>
+
+<script>
+  // Script para manejar la apertura/cierre y el bloqueo del scroll del body
+  const openButtons = document.querySelectorAll('[data-open-modal]');
+  const closeButtons = document.querySelectorAll('[data-close-modal]');
+
+  openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-open-modal');
+      const modal = document.getElementById(modalId || "") as HTMLDialogElement;
+      if (modal) {
+        modal.showModal();
+        document.body.style.overflow = 'hidden'; // Evita scroll en la página de fondo
+      }
+    });
+  });
+
+  const closeModal = (modal: HTMLDialogElement) => {
+    modal.close();
+    document.body.style.overflow = ''; // Restaura scroll
+  }
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-close-modal');
+      const modal = document.getElementById(modalId || "") as HTMLDialogElement;
+      if (modal) closeModal(modal);
+    });
+  });
+
+  // Cerrar al hacer clic fuera (en el backdrop)
+  const dialogs = document.querySelectorAll('dialog');
+  dialogs.forEach(dialog => {
+    dialog.addEventListener('click', (e) => {
+      const dialogDimensions = dialog.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        closeModal(dialog);
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Animación suave de entrada */
+  dialog[open] {
+    animation: zoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  
+  /* Personalización del scrollbar dentro del modal */
+  dialog::-webkit-scrollbar {
+    width: 6px;
+  }
+  dialog::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  dialog::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 20px;
+  }
+</style>
