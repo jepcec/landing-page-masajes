@@ -1,11 +1,12 @@
 ---
-// Services Data (English Only, No Service 5)
+// Services Data with images
 const services = [
   {
     id: "inka-massage",
     title: "The Inka Massage",
     price: "S/ 180",
     time: "90 min",
+    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Ancient Andean techniques with hot stones for complete relaxation.",
     fullDesc: "This medicinal massage is a combination of different Andean techniques, such as working on energy points, relaxing or strong kneading around the body. It ends with the application of hot stones on the back and legs for complete relaxation.",
     variations: ["Aromatherapy Add-on", "Deep Tissue Focus", "Herbal Compress"],
@@ -16,6 +17,7 @@ const services = [
     title: "Champi Massage",
     price: "S/ 120",
     time: "45 min",
+    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Indian head therapy to relieve mental fatigue and restore balance.",
     fullDesc: "The Indian massage is a safe and effective therapy that relieves the back, neck, and head. The work done with Champi massage focuses on energy points, promoting physical harmony, balance, and mental and emotional well-being.",
     variations: ["Scalp Oil Treatment", "Neck & Shoulder Focus"],
@@ -26,6 +28,7 @@ const services = [
     title: "Swedish Massage",
     price: "S/ 140",
     time: "60 min",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Classic soothing massage to improve circulation and reduce stress.",
     fullDesc: "The Swedish massage is a soothing massage involving deep kneading. It regulates blood circulation and relieves muscle pain, stress, and general health issues. It is designed to treat both body and soul.",
     variations: ["Soft Pressure", "Medium Pressure", "Full Body Integration"],
@@ -36,6 +39,7 @@ const services = [
     title: "Shiatsu Massage",
     price: "S/ 160",
     time: "70 min",
+    image: "https://images.unsplash.com/photo-1591343395082-e120087004b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Japanese technique using pressure points to improve vitality.",
     fullDesc: "Japanese Technique: Regulates the flow of energy in the body, relaxes the joints, and improves vitality. Shiatsu massage techniques involve pressure applied with hands, thumbs, elbows, and knees.",
     variations: ["Mat Stretching", "Energy Balancing", "Sports Recovery"],
@@ -46,6 +50,7 @@ const services = [
     title: "Hot Stones Massage",
     price: "S/ 190",
     time: "75 min",
+    image: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Geothermal therapy to harmonize body and mind deeply.",
     fullDesc: "A relaxing massage done by using cold or hot stones. The stone application allows for deeper massage, eliminates stress, and harmonizes the body and mind. Ideally suited for those suffering from high stress or insomnia.",
     variations: ["Volcanic Stones", "Cold Marble Stones (Summer)", "Chakra Alignment"],
@@ -56,6 +61,7 @@ const services = [
     title: "Feet Reflexology",
     price: "S/ 90",
     time: "40 min",
+    image: "https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Stimulate the nervous system through pressure points on the feet.",
     fullDesc: "This massage is performed on the feet, where the entire body is reflected. It relaxes, stimulates the nervous system, improves conditions, alleviates symptoms, and restores vitality and the capacity for self-healing.",
     variations: ["Exfoliating Scrub", "Hydrating Mask", "Leg Massage Extension"],
@@ -66,114 +72,208 @@ const services = [
     title: "Cupping Massage",
     price: "S/ 110",
     time: "50 min",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Ancient suction therapy to increase blood flow and reduce pain.",
     fullDesc: "Cupping is an ancient therapy that is now back in style. It aims to increase blood flow, soften scar tissue, and decrease muscle pain by placing cups on the skin to create suction. Excellent for chronic pain.",
     variations: ["Static Cupping", "Sliding Cupping", "Combined with Deep Tissue"],
     tag: "Upgrade"
   },
 ];
+
+// Tag colors mapping
+const tagColors: Record<string, { bg: string; text: string }> = {
+  "Signature": { bg: "bg-amber-100", text: "text-amber-700" },
+  "Relaxing": { bg: "bg-blue-100", text: "text-blue-700" },
+  "Popular": { bg: "bg-rose-100", text: "text-rose-700" },
+  "Therapeutic": { bg: "bg-purple-100", text: "text-purple-700" },
+  "Luxury": { bg: "bg-yellow-100", text: "text-yellow-700" },
+  "Recovery": { bg: "bg-green-100", text: "text-green-700" },
+  "Upgrade": { bg: "bg-teal-100", text: "text-teal-700" },
+};
 ---
 
-<section id="services" class="py-20 bg-green-50/30">
+<section id="services" class="py-20 lg:py-28 bg-gradient-to-b from-stone-50 to-white">
   <div class="container mx-auto px-6">
+    <!-- Header -->
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-teal-900 mb-4 font-serif">Our Treatments</h2>
-      <p class="text-gray-500 max-w-2xl mx-auto text-lg">
-        Discover a sanctuary of peace. Select a service to view full details.
+      <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-widest mb-4">What We Offer</span>
+      <h2 class="text-4xl lg:text-5xl font-bold text-stone-800 mb-6">Our Treatments</h2>
+      <p class="text-stone-500 max-w-2xl mx-auto text-lg leading-relaxed">
+        Discover a sanctuary of peace. Each treatment is designed to restore balance, 
+        relieve tension, and rejuvenate your body and mind.
       </p>
     </div>
 
+    <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((s) => (
         <>
-          {/* Card Principal */}
-          <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-green-100 flex flex-col h-full relative overflow-hidden">
+          {/* Service Card */}
+          <div class="group bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-stone-100 flex flex-col h-full overflow-hidden">
             
-            {/* Efecto Hover Barra Superior */}
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <span class="text-xs font-bold tracking-wider text-teal-600 uppercase mb-1 block">{s.tag}</span>
-                <h3 class="text-xl font-bold text-gray-800 group-hover:text-teal-700 transition-colors font-serif">{s.title}</h3>
+            {/* Image Container - Fixed aspect ratio */}
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img 
+                src={s.image} 
+                alt={s.title}
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
+              />
+              {/* Overlay gradient */}
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Tag badge */}
+              <div class="absolute top-4 left-4">
+                <span class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide ${tagColors[s.tag]?.bg || 'bg-teal-100'} ${tagColors[s.tag]?.text || 'text-teal-700'} backdrop-blur-sm`}>
+                  {s.tag}
+                </span>
               </div>
-              <div class="bg-green-50 text-teal-800 font-bold px-3 py-1 rounded-lg text-sm whitespace-nowrap">
-                {s.time}
+
+              {/* Time badge */}
+              <div class="absolute top-4 right-4">
+                <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/90 text-stone-700 backdrop-blur-sm">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  {s.time}
+                </span>
               </div>
-            </div>
 
-            <p class="text-gray-600 mb-6 leading-relaxed flex-grow">
-              {s.shortDesc}
-            </p>
-
-            <div class="flex items-center justify-between pt-6 border-t border-gray-100 mt-auto">
-              <span class="text-2xl font-bold text-teal-900">{s.price}</span>
+              {/* Quick view button on hover */}
               <button 
                 data-open-modal={s.id}
-                class="flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-800 transition-colors cursor-pointer group/btn"
+                class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 bg-white text-stone-800 px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg hover:bg-teal-600 hover:text-white cursor-pointer"
               >
-                View Details 
-                <span class="group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+                Quick View
               </button>
+            </div>
+
+            {/* Content */}
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-stone-800 group-hover:text-teal-700 transition-colors mb-3">
+                {s.title}
+              </h3>
+              
+              <p class="text-stone-500 text-sm leading-relaxed flex-grow mb-5">
+                {s.shortDesc}
+              </p>
+
+              {/* Footer */}
+              <div class="flex items-center justify-between pt-5 border-t border-stone-100">
+                <div class="flex flex-col">
+                  <span class="text-xs text-stone-400 uppercase tracking-wide">From</span>
+                  <span class="text-2xl font-bold text-teal-700">{s.price}</span>
+                </div>
+                
+                <button 
+                  data-open-modal={s.id}
+                  class="flex items-center gap-2 text-sm font-semibold text-teal-600 hover:text-teal-800 transition-colors cursor-pointer group/btn"
+                >
+                  Details 
+                  <span class="w-6 h-6 rounded-full bg-teal-50 flex items-center justify-center group-hover/btn:bg-teal-100 group-hover/btn:translate-x-1 transition-all">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Ventana Modal (Pop-up) */}
-          <dialog id={s.id} class="backdrop:bg-gray-900/60 bg-transparent p-0 m-auto rounded-2xl shadow-2xl w-[calc(100%-2rem)] md:max-w-lg max-h-[85vh] open:animate-fade-in closed:animate-fade-out overflow-y-auto overscroll-contain">
-            
-            <div class="bg-white p-6 md:p-8 rounded-2xl relative">
-              
-               <button data-close-modal={s.id} class="absolute top-3 right-3 md:top-4 md:right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 transition-colors z-10">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+          {/* Modal */}
+          <dialog 
+            id={s.id} 
+            class="backdrop:bg-stone-900/70 backdrop:backdrop-blur-sm bg-transparent p-0 m-auto rounded-3xl shadow-2xl w-[calc(100%-2rem)] md:max-w-2xl max-h-[90vh] overflow-hidden"
+          >
+            <div class="bg-white rounded-3xl relative overflow-hidden">
+              {/* Modal Image */}
+              <div class="relative aspect-[16/9] overflow-hidden">
+                <img 
+                  src={s.image} 
+                  alt={s.title}
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                
+                {/* Close button */}
+                <button 
+                  data-close-modal={s.id} 
+                  class="absolute top-4 right-4 text-white/80 hover:text-white bg-black/20 hover:bg-black/40 rounded-full p-2 transition-all backdrop-blur-sm cursor-pointer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
 
-              <div class="mb-6 border-b border-gray-100 pb-6">
-                 <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">{s.tag}</span>
-                 <h3 class="text-2xl md:text-3xl font-bold text-teal-900 mt-3 mb-3 font-serif pr-8">{s.title}</h3>
-                 
-                 <div class="flex flex-wrap gap-4 text-gray-500 text-sm">
-                    <span class="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-md">
-                      <svg class="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                      {s.time}
-                    </span>
-                    <span class="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-md">
-                      <svg class="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                      {s.price}
-                    </span>
-                 </div>
+                {/* Title overlay on image */}
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${tagColors[s.tag]?.bg || 'bg-teal-100'} ${tagColors[s.tag]?.text || 'text-teal-700'} mb-3`}>
+                    {s.tag}
+                  </span>
+                  <h3 class="text-2xl md:text-3xl font-bold text-white">{s.title}</h3>
+                </div>
               </div>
 
-              <div class="prose prose-teal prose-sm md:prose-base mb-8 text-gray-600 leading-relaxed">
-                <p>{s.fullDesc}</p>
-              </div>
+              {/* Modal Content */}
+              <div class="p-6 md:p-8 overflow-y-auto max-h-[50vh]">
+                {/* Meta info */}
+                <div class="flex flex-wrap gap-4 mb-6">
+                  <span class="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-xl text-sm text-stone-600">
+                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="font-semibold">{s.time}</span>
+                  </span>
+                  <span class="flex items-center gap-2 bg-teal-50 px-4 py-2 rounded-xl text-sm text-teal-700">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="font-bold text-lg">{s.price}</span>
+                  </span>
+                </div>
 
-              <div class="bg-green-50/80 rounded-xl p-5 mb-8 border border-green-100">
-                <h4 class="font-bold text-teal-800 mb-3 text-xs uppercase tracking-wider">Available Variations</h4>
-                <ul class="grid grid-cols-1 gap-2">
-                  {s.variations.map(v => (
-                    <li class="flex items-start gap-2 text-gray-700 text-sm">
-                      <svg class="w-5 h-5 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>{v}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                {/* Description */}
+                <div class="mb-8">
+                  <h4 class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3">About This Treatment</h4>
+                  <p class="text-stone-600 leading-relaxed">{s.fullDesc}</p>
+                </div>
 
-              <button class="w-full bg-teal-800 text-white font-bold py-3.5 rounded-xl hover:bg-teal-900 transition-colors shadow-lg shadow-teal-900/10 active:scale-[0.98] transform duration-100">
-                Book This Service
-              </button>
+                {/* Variations */}
+                <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-5 mb-8 border border-teal-100/50">
+                  <h4 class="text-xs font-bold text-teal-700 uppercase tracking-widest mb-4">Available Options</h4>
+                  <ul class="space-y-2.5">
+                    {s.variations.map(v => (
+                      <li class="flex items-center gap-3 text-stone-700">
+                        <span class="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0">
+                          <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                          </svg>
+                        </span>
+                        <span class="font-medium">{v}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* CTA Button */}
+                <button class="w-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-bold py-4 rounded-2xl hover:from-teal-700 hover:to-emerald-700 transition-all shadow-lg shadow-teal-600/20 active:scale-[0.98] transform duration-100 flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  Book This Treatment
+                </button>
+              </div>
             </div>
           </dialog>
         </>
       ))}
     </div>
+
   </div>
 </section>
 
 <script>
-  // Script para manejar la apertura/cierre y el bloqueo del scroll del body
+  // Modal functionality
   const openButtons = document.querySelectorAll('[data-open-modal]');
   const closeButtons = document.querySelectorAll('[data-close-modal]');
 
@@ -183,14 +283,14 @@ const services = [
       const modal = document.getElementById(modalId || "") as HTMLDialogElement;
       if (modal) {
         modal.showModal();
-        document.body.style.overflow = 'hidden'; // Evita scroll en la página de fondo
+        document.body.style.overflow = 'hidden';
       }
     });
   });
 
   const closeModal = (modal: HTMLDialogElement) => {
     modal.close();
-    document.body.style.overflow = ''; // Restaura scroll
+    document.body.style.overflow = '';
   }
 
   closeButtons.forEach(button => {
@@ -201,42 +301,67 @@ const services = [
     });
   });
 
-  // Cerrar al hacer clic fuera (en el backdrop)
+  // Close on backdrop click
   const dialogs = document.querySelectorAll('dialog');
   dialogs.forEach(dialog => {
     dialog.addEventListener('click', (e) => {
-      const dialogDimensions = dialog.getBoundingClientRect();
+      const rect = dialog.getBoundingClientRect();
       if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
+        e.clientX < rect.left ||
+        e.clientX > rect.right ||
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom
       ) {
-        closeModal(dialog);
+        closeModal(dialog as HTMLDialogElement);
       }
     });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dialogs.forEach(dialog => {
+        if (dialog.hasAttribute('open')) {
+          closeModal(dialog as HTMLDialogElement);
+        }
+      });
+    }
   });
 </script>
 
 <style>
-  /* Animación suave de entrada */
+  /* Modal animation */
   dialog[open] {
-    animation: zoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: modalIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-  @keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.95) translateY(10px); }
-    to { opacity: 1; transform: scale(1) translateY(0); }
+
+  @keyframes modalIn {
+    from { 
+      opacity: 0; 
+      transform: scale(0.9) translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1) translateY(0); 
+    }
   }
-  
-  /* Personalización del scrollbar dentro del modal */
+
+  /* Custom scrollbar */
   dialog::-webkit-scrollbar {
     width: 6px;
   }
+
   dialog::-webkit-scrollbar-track {
     background: transparent;
   }
+
   dialog::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+  }
+
+  /* Smooth image loading */
+  img {
+    transition: opacity 0.3s ease;
   }
 </style>
