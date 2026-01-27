@@ -4,66 +4,77 @@ const services = [
   {
     id: "inka-massage",
     title: "The Inka Massage",
-    price: "S/ 180",
+    price: "S/ 150",
     time: "90 min",
     image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    shortDesc: "Ancient Andean techniques with hot stones for complete relaxation.",
-    fullDesc: "This medicinal massage is a combination of different Andean techniques, such as working on energy points, relaxing or strong kneading around the body. It ends with the application of hot stones on the back and legs for complete relaxation.",
+    shortDesc: "Ancient Andean techniques combining soft and strong massage on energy points.",
+    fullDesc: "This massage offers a combination of softer and stronger massage that relieves muscle tension by focusing on energetic trigger points. The massage relaxes muscles and reduces muscle pain, providing a unique Andean healing experience.",
     variations: ["Aromatherapy Add-on", "Deep Tissue Focus", "Herbal Compress"],
     tag: "Signature"
   },
   {
     id: "champi-massage",
     title: "Champi Massage",
-    price: "S/ 120",
+    price: "S/ 50",
     time: "45 min",
     image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Indian head therapy to relieve mental fatigue and restore balance.",
-    fullDesc: "The Indian massage is a safe and effective therapy that relieves the back, neck, and head. The work done with Champi massage focuses on energy points, promoting physical harmony, balance, and mental and emotional well-being.",
+    fullDesc: "Indian Massage is a safe and effective massage that relieves back, neck and head. The work done with the Champi massage is on the energy points, promotes physical harmony and balance, mental and emotional well-being.",
     variations: ["Scalp Oil Treatment", "Neck & Shoulder Focus"],
     tag: "Relaxing"
   },
   {
     id: "swedish-massage",
     title: "Swedish Massage",
-    price: "S/ 140",
+    price: "S/ 120",
     time: "60 min",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Classic soothing massage to improve circulation and reduce stress.",
-    fullDesc: "The Swedish massage is a soothing massage involving deep kneading. It regulates blood circulation and relieves muscle pain, stress, and general health issues. It is designed to treat both body and soul.",
+    fullDesc: "Swedish Massage is a soothing massage and deep kneading. Regulates blood circulation and relieves muscle pain, stress and general health. It is designed to treat body and soul.",
     variations: ["Soft Pressure", "Medium Pressure", "Full Body Integration"],
     tag: "Popular"
   },
   {
     id: "shiatsu-massage",
     title: "Shiatsu Massage",
-    price: "S/ 160",
+    price: "S/ 100",
     time: "70 min",
     image: "https://images.unsplash.com/photo-1591343395082-e120087004b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Japanese technique using pressure points to improve vitality.",
-    fullDesc: "Japanese Technique: Regulates the flow of energy in the body, relaxes the joints, and improves vitality. Shiatsu massage techniques involve pressure applied with hands, thumbs, elbows, and knees.",
+    fullDesc: "Japanese Technique: Regulates the flow of energy in the body, relaxes the joints and improves vitality. The Shiatsu massage techniques accumulated using pressure applied with hands, thumbs, elbows and knees.",
     variations: ["Mat Stretching", "Energy Balancing", "Sports Recovery"],
     tag: "Therapeutic"
   },
   {
     id: "hot-stones",
-    title: "Hot Stones Massage",
-    price: "S/ 190",
-    time: "75 min",
+    title: "Rumu Inkas Massage",
+    price: "S/ 250",
+    time: "90 min",
     image: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    shortDesc: "Geothermal therapy to harmonize body and mind deeply.",
-    fullDesc: "A relaxing massage done by using cold or hot stones. The stone application allows for deeper massage, eliminates stress, and harmonizes the body and mind. Ideally suited for those suffering from high stress or insomnia.",
-    variations: ["Volcanic Stones", "Cold Marble Stones (Summer)", "Chakra Alignment"],
+    shortDesc: "Full body therapy with hot stones to relax muscles and balance energy.",
+    fullDesc: "Full Body therapy and massage with hot stones will aid to relax your muscles and eliminate muscular pain and discomfort. Stones boost the energy flux, balancing the physical, mental, emotional and spiritual.",
+    variations: ["Volcanic Stones", "Chakra Alignment", "Aromatherapy Add-on"],
     tag: "Luxury"
   },
   {
+    id: "lomi-lomi",
+    title: "Lomi Lomi Miu",
+    price: "S/ 80",
+    time: "60 min",
+    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    shortDesc: "Hawaiian healing massage combining breath, energy and flowing touch.",
+    fullDesc: "Can not be compared with other massages. It is a mixture of player's breath and energy with a selection of touch massage to break bottlenecks in the body. A truly unique and transformative experience.",
+    variations: ["Traditional Style", "Deep Tissue Blend", "Relaxation Focus"],
+    tag: "Holistic"
+  },
+  {
     id: "feet-reflexology",
-    title: "Feet Reflexology",
-    price: "S/ 90",
+    title: "Reflexology & Foot Massage",
+    price: "S/ 80",
     time: "40 min",
     image: "https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Stimulate the nervous system through pressure points on the feet.",
-    fullDesc: "This massage is performed on the feet, where the entire body is reflected. It relaxes, stimulates the nervous system, improves conditions, alleviates symptoms, and restores vitality and the capacity for self-healing.",
+    fullDesc: "Massage performed on the feet, where it is reflected throughout our bodies. It relaxes, stimulates the nervous system and improves conditions, alleviate its symptoms, restoring vitality and the capacity for self-healing.",
     variations: ["Exfoliating Scrub", "Hydrating Mask", "Leg Massage Extension"],
     tag: "Recovery"
   },
@@ -78,6 +89,50 @@ const services = [
     variations: ["Static Cupping", "Sliding Cupping", "Combined with Deep Tissue"],
     tag: "Upgrade"
   },
+  {
+    id: "facial",
+    title: "Facial Treatment",
+    price: "S/ 50",
+    time: "45 min",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    shortDesc: "Rejuvenating facial care for glowing, healthy skin.",
+    fullDesc: "Our facial treatment cleanses, exfoliates, and nourishes the skin, promoting a clear, well-hydrated complexion. Customized to your skin type for optimal results and relaxation.",
+    variations: ["Deep Cleansing", "Hydrating Mask", "Anti-Aging Treatment"],
+    tag: "Beauty"
+  },
+  {
+    id: "manicure",
+    title: "Manicure",
+    price: "S/ 40",
+    time: "30 min",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    shortDesc: "Professional nail care for beautiful, healthy hands.",
+    fullDesc: "Complete hand and nail care including shaping, cuticle treatment, hand massage, and polish application. Leave with perfectly groomed nails and soft, moisturized hands.",
+    variations: ["Classic Polish", "Gel Polish", "Natural Buff"],
+    tag: "Beauty"
+  },
+  {
+    id: "pedicure",
+    title: "Pedicure",
+    price: "S/ 50",
+    time: "45 min",
+    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    shortDesc: "Complete foot care for smooth, beautiful feet.",
+    fullDesc: "Indulge in our relaxing pedicure that includes foot soak, exfoliation, callus removal, nail shaping, cuticle care, massage, and polish. Your feet will thank you.",
+    variations: ["Classic Polish", "Gel Polish", "Spa Pedicure"],
+    tag: "Beauty"
+  },
+  {
+    id: "waxing",
+    title: "Waxing",
+    price: "S/ 60",
+    time: "30 min",
+    image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    shortDesc: "Professional hair removal for smooth, lasting results.",
+    fullDesc: "Our professional waxing services provide smooth, long-lasting hair removal. We use high-quality wax suitable for sensitive skin, ensuring minimal discomfort and maximum results.",
+    variations: ["Full Leg", "Half Leg", "Arms", "Underarms", "Bikini"],
+    tag: "Beauty"
+  },
 ];
 
 // Tag colors mapping
@@ -89,6 +144,8 @@ const tagColors: Record<string, { bg: string; text: string }> = {
   "Luxury": { bg: "bg-yellow-100", text: "text-yellow-700" },
   "Recovery": { bg: "bg-green-100", text: "text-green-700" },
   "Upgrade": { bg: "bg-teal-100", text: "text-teal-700" },
+  "Holistic": { bg: "bg-indigo-100", text: "text-indigo-700" },
+  "Beauty": { bg: "bg-pink-100", text: "text-pink-700" },
 };
 ---
 
