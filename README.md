@@ -1,3 +1,7 @@
+# Descripcion
+nombre: Bambu Spa
+categoria: Masajeria Spa
+
 # Astro Starter Kit: Basics
 
 ```sh
