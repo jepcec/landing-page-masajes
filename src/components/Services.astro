@@ -1,11 +1,11 @@
 ---
 // Services Data with images
+// Nota: Se eliminó la propiedad 'time' de los objetos
 const services = [
   {
     id: "inka-massage",
     title: "The Inka Massage",
     price: "S/ 150",
-    time: "90 min",
     image: "https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     shortDesc: "Ancient Andean techniques combining soft and strong massage on energy points.",
     fullDesc: "This massage offers a combination of softer and stronger massage that relieves muscle tension by focusing on energetic trigger points. The massage relaxes muscles and reduces muscle pain, providing a unique Andean healing experience.",
@@ -16,7 +16,6 @@ const services = [
     id: "champi-massage",
     title: "Champi Massage",
     price: "S/ 50",
-    time: "45 min",
     image: "https://mailuna.net/wp-content/uploads/2016/12/champi.jpg",
     shortDesc: "Indian head therapy to relieve mental fatigue and restore balance.",
     fullDesc: "Indian Massage is a safe and effective massage that relieves back, neck and head. The work done with the Champi massage is on the energy points, promotes physical harmony and balance, mental and emotional well-being.",
@@ -27,7 +26,6 @@ const services = [
     id: "swedish-massage",
     title: "Swedish Massage",
     price: "S/ 120",
-    time: "60 min",
     image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     shortDesc: "Classic soothing massage to improve circulation and reduce stress.",
     fullDesc: "Swedish Massage is a soothing massage and deep kneading. Regulates blood circulation and relieves muscle pain, stress and general health. It is designed to treat body and soul.",
@@ -38,7 +36,6 @@ const services = [
     id: "shiatsu-massage",
     title: "Shiatsu Massage",
     price: "S/ 100",
-    time: "70 min",
     image: "https://www.royaltreatmenttherapeutics.com/wp-content/uploads/2018/07/02I20611.jpg",
     shortDesc: "Japanese technique using pressure points to improve vitality.",
     fullDesc: "Japanese Technique: Regulates the flow of energy in the body, relaxes the joints and improves vitality. The Shiatsu massage techniques accumulated using pressure applied with hands, thumbs, elbows and knees.",
@@ -49,7 +46,6 @@ const services = [
     id: "hot-stones",
     title: "Rumu Inkas Massage",
     price: "S/ 250",
-    time: "90 min",
     image: "https://images.unsplash.com/photo-1610402601271-5b4bd5b3eba4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     shortDesc: "Full body therapy with hot stones to relax muscles and balance energy.",
     fullDesc: "Full Body therapy and massage with hot stones will aid to relax your muscles and eliminate muscular pain and discomfort. Stones boost the energy flux, balancing the physical, mental, emotional and spiritual.",
@@ -60,7 +56,6 @@ const services = [
     id: "lomi-lomi",
     title: "Lomi Lomi Miu",
     price: "S/ 80",
-    time: "60 min",
     image: "https://masajescostarican.com/wp-content/uploads/2013/06/Masaje-de-cuello.jpg",
     shortDesc: "Hawaiian healing massage combining breath, energy and flowing touch.",
     fullDesc: "Can not be compared with other massages. It is a mixture of player's breath and energy with a selection of touch massage to break bottlenecks in the body. A truly unique and transformative experience.",
@@ -71,7 +66,6 @@ const services = [
     id: "feet-reflexology",
     title: "Reflexology & Foot Massage",
     price: "S/ 80",
-    time: "40 min",
     image: "https://bellasante.com/cdn/shop/articles/spa_reflexology_284dbd02-7e64-4284-b89f-9c0b2d7bc735.jpg?v=1758840188",
     shortDesc: "Stimulate the nervous system through pressure points on the feet.",
     fullDesc: "Massage performed on the feet, where it is reflected throughout our bodies. It relaxes, stimulates the nervous system and improves conditions, alleviate its symptoms, restoring vitality and the capacity for self-healing.",
@@ -82,7 +76,6 @@ const services = [
     id: "cupping-massage",
     title: "Cupping Massage",
     price: "S/ 110",
-    time: "50 min",
     image: "https://media.post.rvohealth.io/wp-content/uploads/2019/01/Female_Cupping_Therapy_732x549-thumbnail.jpg",
     shortDesc: "Ancient suction therapy to increase blood flow and reduce pain.",
     fullDesc: "Cupping is an ancient therapy that is now back in style. It aims to increase blood flow, soften scar tissue, and decrease muscle pain by placing cups on the skin to create suction. Excellent for chronic pain.",
@@ -93,7 +86,6 @@ const services = [
     id: "facial",
     title: "Facial Treatment",
     price: "S/ 50",
-    time: "45 min",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTxL02ShD4rg-yP4K80w13Ll66HGn61_tQFA&s",
     shortDesc: "Rejuvenating facial care for glowing, healthy skin.",
     fullDesc: "Our facial treatment cleanses, exfoliates, and nourishes the skin, promoting a clear, well-hydrated complexion. Customized to your skin type for optimal results and relaxation.",
@@ -104,7 +96,6 @@ const services = [
     id: "manicure",
     title: "Manicure",
     price: "S/ 40",
-    time: "30 min",
     image: "https://static.wixstatic.com/media/28d39c_39fee459703c4ddcb33b511055322794~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_85,usm_0.66_1.00_0.01/28d39c_39fee459703c4ddcb33b511055322794~mv2.jpg",
     shortDesc: "Professional nail care for beautiful, healthy hands.",
     fullDesc: "Complete hand and nail care including shaping, cuticle treatment, hand massage, and polish application. Leave with perfectly groomed nails and soft, moisturized hands.",
@@ -115,8 +106,7 @@ const services = [
     id: "pedicure",
     title: "Pedicure",
     price: "S/ 50",
-    time: "45 min",
-    image: "https://moonnailspaaugusta.com/uploads/fnail0wpol7ns//news/2021/07/26/thumbnail_medium/6f4856fe5384df94a7ef9a2828eafd82.png",
+    image: "https://plus.unsplash.com/premium_photo-1661499249417-c20d6b668469?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     shortDesc: "Complete foot care for smooth, beautiful feet.",
     fullDesc: "Indulge in our relaxing pedicure that includes foot soak, exfoliation, callus removal, nail shaping, cuticle care, massage, and polish. Your feet will thank you.",
     variations: ["Classic Polish", "Gel Polish", "Spa Pedicure"],
@@ -126,7 +116,6 @@ const services = [
     id: "waxing",
     title: "Waxing",
     price: "S/ 60",
-    time: "30 min",
     image: "https://royaltywellnessspa.com/storage/2024/06/Waxing-by-Royalty-Wellness-Spa-in-Memphis-TN.webp",
     shortDesc: "Professional hair removal for smooth, lasting results.",
     fullDesc: "Our professional waxing services provide smooth, long-lasting hair removal. We use high-quality wax suitable for sensitive skin, ensuring minimal discomfort and maximum results.",
@@ -151,7 +140,6 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 
 <section id="services" class="py-20 lg:py-28 bg-gradient-to-b from-stone-50 to-white">
   <div class="container mx-auto px-6">
-    <!-- Header -->
     <div class="text-center mb-16">
       <span class="inline-block text-teal-600 font-semibold text-sm uppercase tracking-widest mb-4">What We Offer</span>
       <h2 class="text-4xl lg:text-5xl font-bold text-stone-800 mb-6">Our Treatments</h2>
@@ -161,13 +149,12 @@ const tagColors: Record<string, { bg: string; text: string }> = {
       </p>
     </div>
 
-    <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((s) => (
         <>
           {/* Service Card */}
           <div class="group bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 border border-stone-100 flex flex-col h-full overflow-hidden">
-            
+             
             {/* Image Container - Fixed aspect ratio */}
             <div class="relative aspect-[4/3] overflow-hidden">
               <img 
@@ -183,16 +170,6 @@ const tagColors: Record<string, { bg: string; text: string }> = {
               <div class="absolute top-4 left-4">
                 <span class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide ${tagColors[s.tag]?.bg || 'bg-teal-100'} ${tagColors[s.tag]?.text || 'text-teal-700'} backdrop-blur-sm`}>
                   {s.tag}
-                </span>
-              </div>
-
-              {/* Time badge */}
-              <div class="absolute top-4 right-4">
-                <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/90 text-stone-700 backdrop-blur-sm">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  {s.time}
                 </span>
               </div>
 
@@ -273,14 +250,8 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 
               {/* Modal Content */}
               <div class="p-6 md:p-8 overflow-y-auto max-h-[50vh]">
-                {/* Meta info */}
+                {/* Meta info (Sin Duración) */}
                 <div class="flex flex-wrap gap-4 mb-6">
-                  <span class="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-xl text-sm text-stone-600">
-                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span class="font-semibold">{s.time}</span>
-                  </span>
                   <span class="flex items-center gap-2 bg-teal-50 px-4 py-2 rounded-xl text-sm text-teal-700">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -312,13 +283,23 @@ const tagColors: Record<string, { bg: string; text: string }> = {
                   </ul>
                 </div>
 
-                {/* CTA Button */}
-                <button class="w-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-bold py-4 rounded-2xl hover:from-teal-700 hover:to-emerald-700 transition-all shadow-lg shadow-teal-600/20 active:scale-[0.98] transform duration-100 flex items-center justify-center gap-2">
+                {/* CTA Button - WHATSAPP INTEGRADO */}
+                <a 
+                  href={`https://wa.me/51949570782?text=${encodeURIComponent(
+                    `Hola! Me gustaría reservar una cita.\n\n` +
+                    `Tratamiento: *${s.title}*\n` +
+                    `Precio: *${s.price}*\n\n` +
+                    `Quedo atento a su confirmación.`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-bold py-4 rounded-2xl hover:from-teal-700 hover:to-emerald-700 transition-all shadow-lg shadow-teal-600/20 active:scale-[0.98] transform duration-100 flex items-center justify-center gap-2 decoration-0"
+                >
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
                   Book This Treatment
-                </button>
+                </a>
               </div>
             </div>
           </dialog>
